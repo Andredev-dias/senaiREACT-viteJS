@@ -2,3 +2,23 @@
   --background: rgb(52, 54, 88);
   --text-color: #ffff;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+ul {
+  list-style: none;
+}
