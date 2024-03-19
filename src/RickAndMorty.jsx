@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 import { Card } from "./components/Card"
+import  Menu  from "./components/Menu"
+
 import { apiRMCaracters } from "./api/apiRickAndMorty"
 
 export const RickAndMorty = () => {
@@ -25,6 +27,7 @@ const [searchName, setSearchName] = useState("")
 
   return(
     <div>
+      <Menu/>
       <h1>Rick and Morty API</h1>
       <input type="text" placeholder="Digite uma pagina" value={page} onChange={(event) => setPage(event.target.value)}/>
 
