@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Card } from "./components/Card"
 import  Menu  from "./components/Menu"
+import ModalInfo from "./components/ModalInfo"
 
 import { apiRMCaracters } from "./api/apiRickAndMorty"
 
@@ -9,6 +10,7 @@ export const RickAndMorty = () => {
 const [data, setData] = useState([])
 const [page, setPage] = useState("")
 const [searchName, setSearchName] = useState("")
+const [modal, setModal] = useState();
 
 
   useEffect(() => {
@@ -26,6 +28,8 @@ const [searchName, setSearchName] = useState("")
   }, [page, searchName])
 
   return(
+    <>
+      {modal !== undefined && <ModalInfo data={data[modal]} close={() => setModal()}/>}
     <div>
       <Menu/>
       <h1>Rick and Morty API</h1>
@@ -35,14 +39,18 @@ const [searchName, setSearchName] = useState("")
 
       <section>
         <br />
-     {data.map((item) => { 
+     {data.map((item, index) => { 
       //  if(item.name.toLowerCase().includes(searchName.toLowerCase())) 
           return(
-            <Card name={item.name} desc={item.species} value={item.gender} image={item.image} key={item.id}/>
+            <div key={item.id}>
+              <Card name={item.name} desc={item.species} value={item.gender} image={item.image} />
+              <button onClick={() => setModal(index)}>Info</button>
+            </div>
           )
      })}
      <br />
       </section>
     </div>
+    </>
   )
 }
