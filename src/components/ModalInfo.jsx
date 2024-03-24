@@ -5,7 +5,7 @@ const ModalInfo = (props) => {
 
     return(
         <Draggable>
-        <div style={{position: "absolute", left: "40%", top: "25%", transform: "translate(-40%, -25%)", background: "#090909", width: "auto", height:"auto" }}>
+        <div style={{position: "absolute", left: "40%", top: "25%", transform: "translate(-40%, -25%)", background: "#090909", width: "auto", height:"auto", zIndex: "999" }}>
             <button onClick={props.close}>&#128473;</button><br></br>
             <img src={props.data.image}/>
             <h1>{props.data.name}</h1><br/>
