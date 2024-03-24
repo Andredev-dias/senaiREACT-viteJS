@@ -2,6 +2,7 @@
 import Draggable from 'react-draggable';
 
 const ModalInfo = (props) => {
+
     return(
         <Draggable>
         <div style={{position: "absolute", left: "40%", top: "25%", transform: "translate(-40%, -25%)", background: "#090909", width: "auto", height:"auto" }}>
