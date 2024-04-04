@@ -3,7 +3,7 @@ import { Home } from './Home.jsx'
 import { Consume } from './Consume.jsx';
 import { RickAndMorty } from './RickAndMorty.jsx';
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import {
   createBrowserRouter,
