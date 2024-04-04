@@ -5,7 +5,7 @@ export const Card = (props) => {
   <h1>{props.name}</h1>
   <h2>{props.desc}</h2>
   <p>{props.value}</p>
-  <img src={props.image} alt="" />
+  <img src={props.image} alt={props.name} />
 </div>
   )
 }
