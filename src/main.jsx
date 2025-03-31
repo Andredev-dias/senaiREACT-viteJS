@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom/client'
 import { Home } from './Home.jsx'
 import { Consume } from './Consume.jsx';
 import { RickAndMorty } from './RickAndMorty.jsx';
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/react"
+// import { Analytics } from "@vercel/analytics/react"
+// import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import {
   createBrowserRouter,
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
-      <SpeedInsights/>
-      <Analytics />
+{/*       <SpeedInsights/>
+      <Analytics /> */}
       <RouterProvider router={router} />
   </>
 )
